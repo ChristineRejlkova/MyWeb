@@ -2,13 +2,13 @@ import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import { Varela_Round } from 'next/font/google'
-import './globals.css'
-
-const varelaRound = Varela_Round({ weight: '400', subsets: ['latin'], variable: '--font-round' })
 import { ThemeProvider } from '@/components/ThemeProvider'
 import { ThemeScript } from '@/components/ThemeScript'
 import { Toaster } from '@/components/Toaster'
 import { Navbar } from '@/components/Navbar'
+import './globals.css'
+
+const varelaRound = Varela_Round({ weight: '400', subsets: ['latin'], variable: '--font-round' })
 
 export const metadata: Metadata = {
   title: 'Christine Rejlková | Front-end Developer',
