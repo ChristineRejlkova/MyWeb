@@ -134,7 +134,7 @@ export function Portfolio() {
               </p>
               <pre className="overflow-x-auto font-mono text-sm leading-relaxed text-[hsl(var(--foreground))]">
                 <code>
-                  <span className="text-[hsl(var(--muted-foreground))]">// DPH z ceny s DPH</span>
+                  <span className="text-[hsl(var(--muted-foreground))]">{'// DPH z ceny s DPH'}</span>
                   {'\n'}
                   <span className="text-[hsl(var(--muted-foreground))]">function getVatFromGross</span>
                   <span className="text-[hsl(var(--foreground))]">{'<'}</span>
