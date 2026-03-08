@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Moon, Sun } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { useTheme } from './ThemeProvider'
+import { Logo } from './Logo'
 
 const navLinks = [
   { href: '#sluzby', label: 'Služby' },
@@ -24,9 +25,7 @@ export function Navbar() {
       className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-[hsl(var(--background))]/80 backdrop-blur-md"
     >
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <Link href="/" className="text-lg font-medium tracking-tight">
-          christinerejlkova
-        </Link>
+        <Logo />
         <div className="flex items-center gap-6">
           {navLinks.map((link) => (
             <Link

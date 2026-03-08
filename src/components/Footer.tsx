@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="border-t border-[hsl(var(--muted))] py-8 px-6">
       <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 sm:flex-row">
         <p className="text-sm text-[hsl(var(--muted-foreground))]">
-          © {year} Christina Rejlkova
+          © {year} e Rejlkova
         </p>
         <Link
           href="/"

@@ -6,8 +6,8 @@ import toast from 'react-hot-toast'
 import { Send, Github, Linkedin, Mail, Loader2 } from 'lucide-react'
 
 const socialLinks = [
-  { href: 'https://github.com', icon: Github, label: 'GitHub' },
-  { href: 'https://linkedin.com', icon: Linkedin, label: 'LinkedIn' },
+  { href: 'https://github.com/ChristineRejlkova', icon: Github, label: 'GitHub' },
+  { href: 'https://www.linkedin.com/in/christinerejlkova', icon: Linkedin, label: 'LinkedIn' },
 ]
 
 export function Contact() {

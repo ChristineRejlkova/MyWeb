@@ -8,7 +8,7 @@ import { Toaster } from '@/components/Toaster'
 import { Navbar } from '@/components/Navbar'
 
 export const metadata: Metadata = {
-  title: 'Christina Rejlkova | Front-end Developer',
+  title: 'Christine Rejlková | Front-end Developer',
   description: 'Front-end vývojářka – tvorba webů na zakázku, e-shopy (Next.js, React), doučování matematiky a fyziky.',
 }
 

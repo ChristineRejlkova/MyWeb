@@ -24,7 +24,7 @@ export function Hero() {
           Front-end developer & lektorka
         </motion.p>
         <h1 className="mb-6 text-4xl font-semibold tracking-tight sm:text-5xl md:text-6xl">
-          Christina Rejlkova
+          Christine Rejlková
         </h1>
         <motion.p
           initial={{ opacity: 0 }}
