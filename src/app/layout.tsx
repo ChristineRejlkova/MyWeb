@@ -10,9 +10,47 @@ import './globals.css'
 
 const varelaRound = Varela_Round({ weight: '400', subsets: ['latin'], variable: '--font-round' })
 
+const siteUrl = 'https://christinerejlkova.com'
+
 export const metadata: Metadata = {
-  title: 'Christine Rejlková | Front-end Developer',
-  description: 'Front-end vývojářka – tvorba webů na zakázku, e-shopy (Next.js, React), doučování matematiky a fyziky.',
+  title: 'Christine Rejlková | FE Vývojářka & Lektorka Matiky a Fyziky',
+  description:
+    'Profesionální tvorba webů na zakázku v React/Next.js a individuální doučování matematiky a fyziky pro všechny úrovně.',
+  keywords: [
+    'freelance front-end vývojářka',
+    'tvorba webů Next.js',
+    'doučování matematiky a fyziky Praha',
+    'doučování matematiky online',
+    'doučování fyziky Praha',
+    'React vývojář',
+    'web na zakázku',
+  ],
+  authors: [{ name: 'Christine Rejlková', url: siteUrl }],
+  creator: 'Christine Rejlková',
+  metadataBase: new URL(siteUrl),
+  openGraph: {
+    type: 'website',
+    locale: 'cs_CZ',
+    url: siteUrl,
+    siteName: 'Christine Rejlková',
+    title: 'Christine Rejlková | FE Vývojářka & Lektorka Matiky a Fyziky',
+    description:
+      'Profesionální tvorba webů na zakázku v React/Next.js a individuální doučování matematiky a fyziky pro všechny úrovně.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
 }
 
 export default function RootLayout({
