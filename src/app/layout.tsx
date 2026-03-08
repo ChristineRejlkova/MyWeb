@@ -28,9 +28,6 @@ export const metadata: Metadata = {
   authors: [{ name: 'Christine Rejlková', url: siteUrl }],
   creator: 'Christine Rejlková',
   metadataBase: new URL(siteUrl),
-  icons: {
-    icon: '/icon.svg',
-  },
   openGraph: {
     type: 'website',
     locale: 'cs_CZ',
@@ -64,6 +61,7 @@ export default function RootLayout({
   return (
     <html lang="cs" suppressHydrationWarning>
       <head>
+        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <ThemeScript />
       </head>
       <body className={`${GeistSans.variable} ${GeistMono.variable} ${varelaRound.variable} font-sans`}>
