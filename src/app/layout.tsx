@@ -28,6 +28,9 @@ export const metadata: Metadata = {
   authors: [{ name: 'Christine Rejlková', url: siteUrl }],
   creator: 'Christine Rejlková',
   metadataBase: new URL(siteUrl),
+  icons: {
+    icon: '/icon.svg',
+  },
   openGraph: {
     type: 'website',
     locale: 'cs_CZ',
