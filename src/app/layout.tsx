@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
+import { Varela_Round } from 'next/font/google'
 import './globals.css'
+
+const varelaRound = Varela_Round({ weight: '400', subsets: ['latin'], variable: '--font-round' })
 import { ThemeProvider } from '@/components/ThemeProvider'
 import { ThemeScript } from '@/components/ThemeScript'
 import { Toaster } from '@/components/Toaster'
@@ -22,7 +25,7 @@ export default function RootLayout({
       <head>
         <ThemeScript />
       </head>
-      <body className={`${GeistSans.variable} ${GeistMono.variable} font-sans`}>
+      <body className={`${GeistSans.variable} ${GeistMono.variable} ${varelaRound.variable} font-sans`}>
         <ThemeProvider defaultTheme="dark" storageKey="theme">
           <Navbar />
           {children}
