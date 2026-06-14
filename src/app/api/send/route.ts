@@ -23,11 +23,13 @@ export async function POST(request: Request) {
       )
     }
 
-    const toEmail = process.env.CONTACT_EMAIL ?? 'hello@christinerejlkova.com'
-    const fromEmail = process.env.RESEND_FROM ?? 'onboarding@resend.dev'
+    // Kam chodí upozornění na nové zprávy (tvůj soukromý e-mail)
+    const toEmail = process.env.CONTACT_EMAIL ?? 'info@christinerejlkova.com'
+    const from = process.env.RESEND_FROM ?? 'Christine Rejlkova <info@christinerejlkova.com>'
+    const replyToGmail = process.env.REPLY_TO_GMAIL ?? 'christine.rejlkova@gmail.com'
 
     const { data, error } = await resend.emails.send({
-      from: `Kontaktní formulář <${fromEmail}>`,
+      from,
       to: [toEmail],
       replyTo: email,
       subject: `[christinerejlkova.com] Zpráva od ${name}`,
@@ -37,6 +39,17 @@ export async function POST(request: Request) {
         <p>${message.replace(/\n/g, '<br>')}</p>
       `,
     })
+
+    if (!error) {
+      // Potvrzovací e-mail odesílateli – reply_to = Gmail, odpověď ti přijde do osobního inboxu
+      await resend.emails.send({
+        from,
+        to: [email],
+        replyTo: replyToGmail,
+        subject: 'Děkuji za zprávu – Christine Rejlková',
+        html: `<p>Ahoj ${name},</p><p>děkuji za zprávu. Brzy se ozvu.</p><p>Christine</p>`,
+      })
+    }
 
     if (error) {
       console.error('Resend error:', error)
